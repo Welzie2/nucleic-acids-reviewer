@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Nucleic Acids Reviewer</title>
+<style>
+:root{--bg:#fbf6f4;--cd:#fff;--tx:#2a1d1f;--mu:#85706f;--ac:#b83a5c;--sf:#f7e4e9;--ok:#25834a;--er:#c92f2f;--ln:#ecdcdd;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1214;--cd:#241a1d;--tx:#f3e9ea;--mu:#b4a0a1;--ac:#f07a9a;--sf:#3a2229;--ln:#3b2a2e}}
+:root[data-theme="dark"]{--bg:#1a1214;--cd:#241a1d;--tx:#f3e9ea;--mu:#b4a0a1;--ac:#f07a9a;--sf:#3a2229;--ln:#3b2a2e}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
+header{background:var(--cd);border-bottom:1px solid var(--ln);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}.in{max-width:960px;margin:auto;padding:10px 14px}
+header h1{font-size:17px;margin:0 0 8px}header input{width:100%;padding:9px 14px;border:1px solid var(--ln);border-radius:20px;background:var(--bg);color:var(--tx);font:inherit}
+#pl{display:flex;gap:6px;overflow-x:auto;padding:8px 0 2px;scrollbar-width:none}#pl button{flex:none;border:1px solid var(--ln);background:var(--cd);color:var(--mu);border-radius:20px;padding:6px 14px;font:600 13px system-ui;cursor:pointer}#pl button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+main{max-width:960px;margin:auto;padding:14px}.c{background:var(--cd);border:1px solid var(--ln);border-radius:14px;padding:15px;margin-bottom:12px}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}.g .c{margin:0}.n{font-size:24px;font-weight:700;color:var(--ac)}.l{font-size:12px;color:var(--mu)}
+.b{border:0;border-radius:20px;background:var(--ac);color:#fff;padding:9px 16px;margin:3px 4px 3px 0;font:600 14px system-ui;cursor:pointer}.b.o{background:var(--sf);color:var(--ac)}.b.d{background:var(--er)}
+.p{height:7px;background:var(--ln);border-radius:7px;overflow:hidden;margin:6px 0}.p i{display:block;height:100%;background:var(--ac)}.t{display:inline-block;font-size:11px;background:var(--sf);color:var(--ac);padding:2px 9px;border-radius:9px;margin:0 4px 4px 0}.m{font-size:12px;color:var(--mu)}
+.x{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}th,td{padding:6px 9px;border-bottom:1px solid var(--ln);text-align:left}th{background:var(--sf)}
+details{background:var(--cd);border:1px solid var(--ln);border-radius:10px;padding:9px 13px;margin-bottom:8px}summary{cursor:pointer;font-weight:600}
+.ch{display:block;width:100%;text-align:left;padding:12px;margin:6px 0;border:1px solid var(--ln);border-radius:10px;background:var(--cd);color:var(--tx);font:inherit;cursor:pointer}.ch.sl{border-color:var(--ac)}.ch.ok{border-color:var(--ok);background:rgba(37,131,74,.16)}.ch.no{border-color:var(--er);background:rgba(201,47,47,.14)}
+.fc{min-height:190px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:17px;padding:20px;border:2px solid var(--ln);border-radius:18px;background:var(--cd);cursor:pointer;margin:12px 0}
+.fw{display:flex;flex-wrap:wrap;gap:5px;font-size:12px;margin-bottom:10px}.fw b{background:var(--sf);color:var(--ac);padding:2px 9px;border-radius:9px;font-weight:600}
+mark{background:#ffe066;color:#222}select,input[type=number],input[type=text]{padding:8px;border:1px solid var(--ln);border-radius:8px;background:var(--cd);color:var(--tx);font:inherit}
+</style></head><body>
+<header><div class="in"><h1>🧬 Nucleic Acids Reviewer</h1><input id="q" placeholder="Search terms, definitions, questions…"><div id="pl"></div></div></header>
+<main><div class="fw"><b>Learn</b>→<b>Understand</b>→<b>Flashcards</b>→<b>Quiz</b>→<b>Review mistakes</b>→<b>Quick Reference</b>→<b>Retake</b></div><div id="o"></div></main>
+<script>
+const TP=[
+["Nucleic Acids Overview","Slides 1–3","What nucleic acids are.",[
+["Nucleic acid","A complex biomolecule that stores genetic information in the form of a code; arise from the nucleus of the cell."],
+["The nucleus","Often called the 'control center' of the cell because the nucleic acids within contain the coded instructions for all of the cell's (and therefore the organism's) activities."],
+["Two types","Deoxyribonucleic acid (DNA) and ribonucleic acid (RNA)."],
+["Nucleic acids as polymers","Polymers consisting of long chains of monomers called nucleotides."]]],
+["Nucleotide Structure","Slides 4–6","Parts of a nucleotide and its formation.",[
+["Nucleotide (general)","Carbon ring structures containing nitrogen linked to a 5-carbon sugar (a ribose)."],
+["Ribonucleotide vs deoxyribonucleotide","The 5-carbon sugar is either ribose or deoxyribose, making the nucleotide either a ribonucleotide or a deoxyribonucleotide."],
+["Three parts of a nucleotide","A nitrogenous base, a pentose sugar and a phosphate group."],
+["Formation of a nucleotide","Base (adenine) + sugar (deoxyribose) → deoxyadenosine (a nucleoside) + H2O. Then phosphate + the 5′ OH of the nucleoside → deoxyadenosine 5′-monophosphate (a nucleotide) + H2O."]]],
+["Nitrogen Bases","Slides 7–8","Purines and pyrimidines.",[
+["Nitrogen base","Aromatic, heterocyclic compound containing carbon, hydrogen, nitrogen and, in some cases, oxygen atoms."],
+["Purines","Adenine (A) and guanine (G); both in DNA and RNA."],
+["Pyrimidines","Cytosine (C), thymine (T) and uracil (U)."],
+["Where each base occurs","Cytosine: DNA and RNA. Thymine: DNA only. Uracil: RNA only. Adenine and guanine: DNA and RNA."]]],
+["Pentose Sugars","Slide 9","Ribose and deoxyribose.",[
+["Two pentose sugars","RNA contains ribose; DNA contains deoxyribose."],
+["Primed numbering","The sugars' carbon atoms are numbered with primes (1′–5′) to distinguish them from the nitrogen bases."],
+["Difference","In deoxyribose no oxygen is bonded to the 2′ carbon (ribose has OH there)."]]],
+["Nucleosides & Nucleotides","Slides 10–12","Definitions and naming.",[
+["Nucleoside","A nitrogen base linked by a glycosidic bond to C1′ of a ribose or deoxyribose. A nucleotide WITHOUT a phosphate group is a nucleoside."],
+["Naming nucleosides","Change the base ending to -osine for purines and -idine for pyrimidines."],
+["Nucleotide (definition)","A nucleoside that forms a phosphate ester with the C5′ OH group of ribose or deoxyribose."],
+["Naming nucleotides","Name of the nucleoside followed by 5′-monophosphate."]],
+{h:["Base","Nucleoside","Nucleotide"],r:[["RNA: Adenine (A)","Adenosine","Adenosine 5′-monophosphate (AMP)"],["RNA: Guanine (G)","Guanosine","Guanosine 5′-monophosphate (GMP)"],["RNA: Cytosine (C)","Cytidine","Cytidine 5′-monophosphate (CMP)"],["RNA: Uracil (U)","Uridine","Uridine 5′-monophosphate (UMP)"],["DNA: Adenine (A)","Deoxyadenosine","Deoxyadenosine 5′-monophosphate (dAMP)"],["DNA: Guanine (G)","Deoxyguanosine","Deoxyguanosine 5′-monophosphate (dGMP)"],["DNA: Cytosine (C)","Deoxycytidine","Deoxycytidine 5′-monophosphate (dCMP)"],["DNA: Thymine (T)","Deoxythymidine","Deoxythymidine 5′-monophosphate (dTMP)"]]}],
+["AMP, ADP and ATP","Slide 13","Extra phosphates.",[
+["Diphosphates and triphosphates","Additional phosphate groups can be added to nucleoside 5′-monophosphates to form diphosphates and triphosphates."],
+["Sequence","AMP (adenosine 5′-monophosphate) → ADP (5′-diphosphate) → ATP (5′-triphosphate); each step adds a phosphate and releases H2O."],
+["ATP","The major energy source for cellular activity."]]],
+["Primary Structure","Slides 14–19","Nucleotide sequence and phosphodiester bonds.",[
+["Primary structure","The nucleotide sequence of a nucleic acid."],
+["Phosphodiester bond","Joins nucleotides: the 3′-OH of the sugar in one nucleotide forms an ester bond to the phosphate group on the 5′-carbon of the sugar of the next nucleotide (H2O is released)."],
+["Ends of a polymer","A free 5′-phosphate group at one end and a free 3′-OH group at the other end."],
+["Reading the sequence","Read from the free 5′ end using the letters of the bases. Example: 5′—G—A—T—C—3′."],
+["RNA primary structure","A, C, G and U are linked by 3′–5′ ester bonds between ribose and phosphate."],
+["DNA primary structure","A, C, G and T are linked by 3′–5′ ester bonds between deoxyribose and phosphate."]]],
+["DNA Double Helix","Slides 20–27","Secondary structure.",[
+["Double helix","Two strands of nucleotides wind together in a double helix: strands run in opposite directions; bases arranged in step-like pairs; base pairs held together by hydrogen bonding."],
+["Complementary base pairs","The pairing is very specific: A–T and G–C."],
+["Hydrogen bonds per pair","Two hydrogen bonds between A and T; three between G and C."],
+["Purine + pyrimidine","Each pair consists of a purine and a pyrimidine, so pairs are the same width, keeping the strands at equal distances (1.1 nm in the slide figure)."],
+["Antiparallel","DNA base-pairing is antiparallel: 5′→3′ (left to right) on top pairs with 5′→3′ (right to left) on the bottom."],
+["Backbone and grooves","Sugar-phosphate backbone on the outside with base pairs inside; the helix has a major groove and a minor groove."],
+["Base pairing in RNA","RNA is usually single stranded; base pairing can occur in RNA but is usually within the same strand."]]],
+["Ribonucleic Acid (RNA)","Slides 28–30","Differences from DNA and types of RNA.",[
+["RNA abundance","RNA is much more abundant than DNA."],
+["DNA vs RNA differences","Sugar: ribose (RNA), deoxyribose (DNA). Base: uracil replaces thymine in RNA (U pairs with A). RNA is single stranded; DNA is double stranded. RNA molecules are much smaller than DNA molecules."],
+["Three main RNA types","Ribosomal (rRNA), messenger (mRNA) and transfer (tRNA)."],
+["rRNA","About 75% of total RNA; major component of the ribosomes."],
+["mRNA","5–10% of total RNA; carries information for protein synthesis from the DNA in the nucleus to the ribosomes."],
+["tRNA","10–15% of total RNA; brings amino acids to the ribosomes for protein synthesis."]],
+{h:["Feature","DNA","RNA"],r:[["Sugar","Deoxyribose","Ribose"],["Bases","A, G, C, T","A, G, C, U"],["Strands","Double stranded","Single stranded (usually)"],["Size","Much larger","Much smaller"]]}]];
+const QZ=[
+[0,"Nucleic acids are polymers of:",["Nucleotides","Amino acids","Fatty acids","Monosaccharides"],0,"E"],
+[0,"The 'control center' of the cell is the:",["Nucleus","Ribosome","Membrane","Vacuole"],0,"E"],
+[0,"The two types of nucleic acids are:",["DNA and RNA","ATP and ADP","rRNA and tRNA only","DNA and ATP"],0,"E"],
+[1,"A nucleotide consists of:",["Nitrogenous base, pentose sugar, phosphate group","Base and sugar only","Sugar and phosphate only","Amino acid and base"],0,"E"],
+[1,"Which is NOT a part of a nucleotide?",["Amino acid","Phosphate group","Pentose sugar","Nitrogenous base"],0,"M"],
+[2,"Which are purines?",["Adenine and guanine","Cytosine and thymine","Thymine and uracil","Cytosine and uracil"],0,"E"],
+[2,"Which base is found in DNA only?",["Thymine","Uracil","Cytosine","Adenine"],0,"E"],
+[2,"Which base is found in RNA only?",["Uracil","Thymine","Guanine","Cytosine"],0,"E"],
+[2,"True or false: cytosine is found in both DNA and RNA.",["True","False"],0,"M"],
+[3,"DNA contains which sugar?",["Deoxyribose","Ribose","Glucose","Fructose"],0,"E"],
+[3,"Deoxyribose lacks oxygen on carbon:",["2′","1′","5′","4′"],0,"M"],
+[3,"Sugar carbons are numbered with primes to distinguish them from:",["The nitrogen bases","The phosphate","Water","Hydrogen"],0,"D"],
+[4,"A nucleoside is:",["A base linked to a sugar (no phosphate)","A base with a phosphate","A sugar and phosphate","Two nucleotides"],0,"E"],
+[4,"The glycosidic bond in a nucleoside links the base to carbon:",["C1′","C3′","C5′","C2′"],0,"M"],
+[4,"Nucleosides of purines end in:",["-osine","-idine","-ase","-ose"],0,"M"],
+[4,"Nucleosides of pyrimidines end in:",["-idine","-osine","-ase","-yl"],0,"M"],
+[4,"The nucleoside of cytosine in RNA is:",["Cytidine","Cytosine","Deoxycytidine","Uridine"],0,"M"],
+[4,"dTMP stands for:",["Deoxythymidine 5′-monophosphate","Thymine triphosphate","Deoxytyrosine monophosphate","Diphosphate"],0,"D"],
+[4,"The nucleotide is a phosphate ester at which carbon?",["C5′","C1′","C3′","C2′"],0,"D"],
+[5,"The major energy source for cellular activity is:",["ATP","AMP","DNA","tRNA"],0,"E"],
+[5,"Adding a phosphate to AMP gives:",["ADP","ATP","GMP","dAMP"],0,"M"],
+[6,"The primary structure of a nucleic acid is the:",["Nucleotide sequence","Double helix","Groove","Hydrogen bonding"],0,"E"],
+[6,"Nucleotides are joined by:",["Phosphodiester bonds","Peptide bonds","Glycosidic bonds only","Disulfide bonds"],0,"E"],
+[6,"The phosphodiester bond joins the 3′-OH of one sugar to the phosphate on the ___ carbon of the next.",["5′","1′","2′","4′"],0,"M"],
+[6,"Sequences are read from the:",["Free 5′ end","Free 3′ end","Middle","Either randomly"],0,"M"],
+[6,"A polymer has a free ___ at the 3′ end.",["Hydroxyl (OH)","Phosphate","Base","Amino group"],0,"D"],
+[7,"The complementary base pairs in DNA are:",["A–T and G–C","A–G and C–T","A–C and G–T","A–U and G–C only"],0,"E"],
+[7,"How many hydrogen bonds form between G and C?",["Three","Two","One","Four"],0,"M"],
+[7,"How many hydrogen bonds form between A and T?",["Two","Three","One","Four"],0,"M"],
+[7,"Each DNA base pair is a:",["Purine and a pyrimidine","Two purines","Two pyrimidines","Base and sugar"],0,"M"],
+[7,"The two strands of the DNA double helix are:",["Antiparallel","Parallel","Identical","Single"],0,"E"],
+[7,"True or false: RNA is usually double stranded.",["True","False"],1,"E"],
+[8,"In RNA, uracil replaces:",["Thymine","Cytosine","Adenine","Guanine"],0,"E"],
+[8,"Which RNA is the major component of ribosomes?",["rRNA","mRNA","tRNA","DNA"],0,"M"],
+[8,"Which RNA carries information from DNA to the ribosomes?",["mRNA","tRNA","rRNA","dATP"],0,"M"],
+[8,"Which RNA brings amino acids to ribosomes?",["tRNA","mRNA","rRNA","None"],0,"M"],
+[8,"rRNA makes up about what percent of total RNA?",["75","5–10","10–15","100"],0,"D"],
+[8,"Name the RNA type that makes up 10–15% of total RNA (abbreviation).",[],["trna","transfer rna"],"D"]];
+QZ.forEach(q=>{if(q[2].length){const c=q[2][q[3]];q[2]=[...q[2]].sort(()=>Math.random()-.5);q[3]=q[2].indexOf(c)}else{q[5]=q[3];q[3]=-1}});
+const DF={E:"Easy",M:"Medium",D:"Difficult"};
+let ST={v:{},qa:{},f:{},sc:[],h:[]};try{Object.assign(ST,JSON.parse(localStorage.getItem("nuc")||"{}"))}catch(e){}
+const save=()=>{try{localStorage.setItem("nuc",JSON.stringify(ST))}catch(e){}};
+const $=s=>document.querySelector(s),O=$("#o");
+const CD=TP.flatMap((t,i)=>t[3].map((c,j)=>({k:i+"-"+j,t:i,q:c[0],a:c[1]})));
+const PB=p=>`<div class="p"><i style="width:${p}%"></i></div>`;
+const TB=t=>t[4]?`<div class="x"><table><tr>${t[4].h.map(h=>`<th>${h}</th>`).join("")}</tr>${t[4].r.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join("")}</tr>`).join("")}</table></div>`:"";
+const kn=i=>TP[i][3].filter((_,j)=>ST.f[i+"-"+j]=="k").length/TP[i][3].length,tp=i=>Math.round((ST.v[i]?50:0)+kn(i)*50);
+const tot=()=>{let c=0,w=0;Object.values(ST.qa).forEach(a=>{c+=a.c;w+=a.w});return[c,w]};
+const wk=()=>TP.map((_,i)=>i).filter(i=>{const a=ST.qa[i];return a&&a.w&&a.c/(a.c+a.w)<.7});
+const NAV=[["dash","Dashboard"],["full","Full Reviewer"],["topics","Topics"],["expl","Explanations"],["quiz","Quiz"],["cards","Flashcards"],["quick","Quick Reference"],["prog","Progress"]];
+let cur="dash",arg,F={g:"all",i:0,f:0},Z=null;
+$("#pl").innerHTML=NAV.map(n=>`<button data-go="${n[0]}">${n[1]}</button>`).join("");
+const body=i=>{const t=TP[i];return`<div class="c"><h2 style="margin:0">${t[0]}</h2><div class="m">Source Section: ${t[1]}</div><p>${t[2]}</p>${t[3].map(c=>`<p><b>${c[0]}.</b> ${c[1]}</p>`).join("")}${TB(t)}</div>`};
+const R={
+dash(){const[c,w]=tot(),vc=Object.keys(ST.v).length,k=Object.values(ST.f).filter(x=>x=="k").length,p=Math.round((vc/TP.length+k/CD.length)*50);
+return`<h1>Dashboard</h1><div class="g">${[["Topics",TP.length],["Concepts",CD.length],["Quiz questions",QZ.length],["Flashcards",CD.length],["Progress",p+"%"],["Answered",c+w],["Correct",c],["Incorrect",w],["Topics reviewed",vc+"/"+TP.length]].map(x=>`<div class="c"><div class="n">${x[1]}</div><div class="l">${x[0]}</div></div>`).join("")}</div>${PB(p)}<p><button class="b" data-go="topics" data-a="${Math.min(vc,TP.length-1)}">Continue Studying</button><button class="b" data-go="quiz">Take a Quiz</button><button class="b" data-go="cards">Review Flashcards</button><button class="b o" data-go="quick">Quick Reference</button></p><div class="c"><b>Weak topics:</b> ${wk().map(i=>`<span class="t">${TP[i][0]}</span>`).join("")||"<span class='m'>none yet</span>"}</div><div class="c"><b>Recently studied:</b> ${ST.h.slice(-5).reverse().map(i=>`<span class="t">${TP[i][0]}</span>`).join("")||"<span class='m'>nothing yet</span>"}</div><p class="m">Source: Nucleic Acids slides (uploaded). Content comes only from that file.</p>`},
+full(){TP.forEach((_,i)=>ST.v[i]=1);save();return"<h1>Full Reviewer</h1>"+TP.map((_,i)=>body(i)).join("")},
+topics(a){if(a!==undefined&&a!==""){const i=+a;ST.v[i]=1;ST.h=ST.h.filter(x=>x!=i).concat(i);save();return`<button class="b o" data-go="topics">← Topics</button>${body(i)}<button class="b" data-go="cards" data-a="${i}">Flashcards</button><button class="b" data-go="quiz" data-a="${i}">Quiz this topic</button>`}
+return"<h1>Topics</h1>"+TP.map((t,i)=>`<div class="c"><h3 style="margin:0">${t[0]}</h3><p>${t[2]}</p><span class="t">${t[3].length} concepts</span><span class="t">${QZ.filter(q=>q[0]==i).length} questions</span><span class="t">${t[3].length} flashcards</span>${PB(tp(i))}<button class="b" data-go="topics" data-a="${i}">Open</button><button class="b o" data-go="cards" data-a="${i}">Flashcards</button></div>`).join("")},
+expl(){return"<h1>Explanations</h1><p class='m'>Tap a card to expand.</p>"+TP.map(t=>`<h3>${t[0]}</h3>`+t[3].map(c=>`<details><summary>${c[0]}</summary><p><b>What it is / means:</b> ${c[1]}</p><p class="m">Source Section: ${t[1]}</p></details>`).join("")).join("")},
+quick(){return"<h1>Quick Reference</h1>"+TP.map(t=>`<h3>${t[0]}</h3><div class="g" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr))">${t[3].map(c=>`<div class="c" style="font-size:13px"><mark>${c[0]}</mark><br>${c[1]}</div>`).join("")}</div>${TB(t)}`).join("")},
+cards(a){if(a!==undefined&&a!==""){F={g:a,i:0,f:0}}const d=F.g=="all"?CD:CD.filter(c=>c.t==F.g),c=d[F.i%d.length],m=ST.f[c.k];
+return`<h1>Flashcards</h1><select id="fg"><option value="all">All Flashcards</option>${TP.map((t,i)=>`<option value="${i}" ${F.g==i?"selected":""}>${t[0]}</option>`).join("")}</select> <span class="t">${F.i%d.length+1}/${d.length}</span><span class="t">${m=="k"?"Known":m=="r"?"Need review":"Unmarked"}</span><div class="fc" id="fc">${F.f?c.a:"<div>What is / describe:<br><b>"+c.q+"</b></div>"}</div><button class="b o" data-fa="p">Previous</button><button class="b o" data-fa="n">Next</button><button class="b o" data-fa="s">Shuffle</button><button class="b" data-fa="k">Mark as Known</button><button class="b d" data-fa="r">Need Review</button>`},
+quiz(a){if(Z)return zr();if(a!==undefined&&a!=="")return zs("t",+a,5);return`<h1>Quiz</h1><div class="c"><p>Mode <select id="qm"><option value="a">All Topics</option><option value="w">Weak Topics</option><option value="r">Random Quiz</option>${TP.map((t,i)=>`<option value="${i}">Topic: ${t[0]}</option>`).join("")}</select></p><p>Questions <select id="qn"><option>5</option><option>10</option><option>20</option><option>30</option><option value="c">Custom</option></select> <input type="number" id="qc" value="8" min="1" max="${QZ.length}" style="width:70px"></p><button class="b" id="go">Start</button></div>`},
+prog(){const[c,w]=tot(),k=Object.values(ST.f).filter(x=>x=="k").length,r=Object.values(ST.f).filter(x=>x=="r").length,vc=Object.keys(ST.v).length;
+return`<h1>Progress</h1><div class="c"><p>Topics viewed ${vc}/${TP.length}</p>${PB(vc/TP.length*100)}<p>Flashcards known ${k}/${CD.length} · need review ${r}</p>${PB(k/CD.length*100)}<p>Quiz accuracy ${c+w?Math.round(c/(c+w)*100):0}% (${c} correct / ${w} incorrect)</p>${PB(c+w?c/(c+w)*100:0)}<p>Recent scores: ${ST.sc.slice(-8).map(x=>x+"%").join(", ")||"none"}</p></div>${TP.map((t,i)=>`<div class="c">${t[0]} — ${tp(i)}%${PB(tp(i))}</div>`).join("")}<button class="b o" id="rs">Reset progress</button>`}};
+function zs(m,t,n){let p=QZ.map((_,i)=>i);if(m=="t")p=p.filter(i=>QZ[i][0]==t);if(m=="w"){const f=p.filter(i=>wk().includes(QZ[i][0]));if(f.length)p=f}if(!p.length)p=QZ.map((_,i)=>i);p.sort(()=>Math.random()-.5);Z={p:p.slice(0,Math.max(1,n)),i:0,s:null,d:0,r:[]};return zr()}
+const A=q=>q[2].length?q[2][q[3]]:q[5][0];
+function zr(){if(Z.i>=Z.p.length)return ze();const q=QZ[Z.p[Z.i]];let h=`<h1>Quiz</h1>${PB(Z.i/Z.p.length*100)}<div class="c"><span class="t">${TP[q[0]][0]}</span><span class="t">${DF[q[4]]}</span><span class="t">${Z.i+1}/${Z.p.length}</span><h3>${q[1]}</h3>`;
+if(q[2].length)q[2].forEach((o,j)=>{let c="ch";if(Z.d){if(j==q[3])c+=" ok";else if(j==Z.s)c+=" no"}else if(j==Z.s)c+=" sl";h+=`<button class="${c}" data-ch="${j}">${o}</button>`});else h+=`<input type="text" id="ia" placeholder="Your answer" ${Z.d?"disabled":""}>`;
+h+=Z.d?`<p><b>${Z.ok?"Correct.":"Incorrect."}</b> Answer: ${A(q)}. <span class="m">Review: ${TP[q[0]][0]} (${TP[q[0]][1]})</span></p><button class="b" data-z="n">Next</button>`:`<button class="b" data-z="c">Check answer</button>`;return h+"</div>"}
+function ze(){const c=Z.r.filter(x=>x[1]).length,n=Z.r.length,bad=Z.r.filter(x=>!x[1]),bt=[...new Set(bad.map(x=>QZ[x[0]][0]))];ST.sc.push(Math.round(c/n*100));save();
+return`<h1>Results</h1><div class="c"><div class="n">${c}/${n} · ${Math.round(c/n*100)}%</div><p>Correct ${c} · Incorrect ${n-c}</p><p>Needs improvement: ${bt.map(i=>`<span class="t">${TP[i][0]}</span>`).join("")||"none"}</p></div>${bad.map(x=>`<div class="c"><b>${QZ[x[0]][1]}</b><br>Answer: ${A(QZ[x[0]])}</div>`).join("")}<button class="b" id="nq">New quiz</button>`}
+function find(v){const re=new RegExp("("+v.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")","ig");let h="";TP.forEach(t=>t[3].forEach(c=>{if((c[0]+c[1]).toLowerCase().includes(v))h+=`<div class="c"><span class="t">Reviewer / Flashcards / Quick Ref</span><span class="t">${t[0]}</span><br><b>${c[0].replace(re,"<mark>$1</mark>")}</b><br>${c[1].replace(re,"<mark>$1</mark>")}</div>`}));QZ.forEach(q=>{if((q[1]+q[2].join(" ")).toLowerCase().includes(v))h+=`<div class="c"><span class="t">Quiz question</span><span class="t">${TP[q[0]][0]}</span><br>${q[1].replace(re,"<mark>$1</mark>")}</div>`});TP.forEach(t=>{if(t[4]&&JSON.stringify(t[4].r).toLowerCase().includes(v))h+=`<div class="c"><span class="t">Table</span> ${t[0]}</div>`});return`<h1>Search: ${v}</h1>`+(h||"<p>No results.</p>")}
+function draw(){document.querySelectorAll("#pl button").forEach(b=>b.classList.toggle("on",b.dataset.go==cur));O.innerHTML=R[cur](arg)}
+function go(v,a){cur=v;arg=a;if(v=="quiz")Z=null;$("#q").value="";draw();scrollTo(0,0)}
+document.addEventListener("click",e=>{const t=e.target.closest("button,.fc");if(!t)return;const d=F.g=="all"?CD:CD.filter(c=>c.t==F.g);
+if(t.dataset.go)go(t.dataset.go,t.dataset.a);
+else if(t.id=="fc"){F.f^=1;arg=undefined;draw()}
+else if(t.dataset.fa){const a=t.dataset.fa,c=d[F.i%d.length];if(a=="p")F.i=(F.i-1+d.length)%d.length;if(a=="n")F.i++;if(a=="s")F.i=Math.floor(Math.random()*d.length);if(a=="k"||a=="r"){ST.f[c.k]=a;save();F.i++}F.f=0;arg=undefined;draw()}
+else if(t.id=="go"){const m=$("#qm").value;let n=$("#qn").value;n=n=="c"?+$("#qc").value:+n;O.innerHTML=/^\d+$/.test(m)?zs("t",+m,n):zs(m,0,n)}
+else if(t.id=="nq"){Z=null;draw()}
+else if(t.dataset.ch!==undefined&&Z&&!Z.d){Z.s=+t.dataset.ch;O.innerHTML=zr()}
+else if(t.dataset.z=="c"){const qi=Z.p[Z.i],q=QZ[qi];let ok;if(q[2].length){if(Z.s===null)return;ok=Z.s==q[3]}else{const v=($("#ia").value||"").trim().toLowerCase();if(!v)return;ok=q[5].includes(v)}const a=ST.qa[q[0]]||(ST.qa[q[0]]={c:0,w:0});ok?a.c++:a.w++;Z.ok=ok;Z.r.push([qi,ok]);Z.d=1;save();O.innerHTML=zr()}
+else if(t.dataset.z=="n"){Z.i++;Z.s=null;Z.d=0;O.innerHTML=zr()}
+else if(t.id=="rs"){if(!t.dataset.c){t.dataset.c=1;t.textContent="Tap again to confirm reset";t.classList.remove("o");t.classList.add("d");setTimeout(()=>{if(t.isConnected){delete t.dataset.c;t.textContent="Reset progress";t.classList.add("o");t.classList.remove("d")}},4000)}else{ST={v:{},qa:{},f:{},sc:[],h:[]};try{localStorage.removeItem("nuc")}catch(x){}Z=null;F={g:"all",i:0,f:0};draw()}}});
+document.addEventListener("change",e=>{if(e.target.id=="fg"){F={g:e.target.value,i:0,f:0};arg=undefined;draw()}});
+$("#q").addEventListener("input",e=>{const v=e.target.value.trim().toLowerCase();if(v.length<2)draw();else O.innerHTML=find(v)});
+draw();
+</script></body></html>
